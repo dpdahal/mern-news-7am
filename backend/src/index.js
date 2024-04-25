@@ -1,11 +1,13 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import Connection from './config/Connection.js';
 import router from './routes/index.js';
 
 dotenv.config();
-
+Connection.connect();
 const app = express();
 app.use(express.json());
+app.use(express.static('public'));
 app.use(router);
 const mode = process.env.MODE;
 const http =process.env.HTTP_S;
