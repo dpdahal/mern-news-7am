@@ -26,6 +26,7 @@ export default function LoginComponent() {
   
     API.post('/login', data).then((res)=>{
       localStorage.setItem('token', res.data.token);
+      console.log(res.data.token);
       window.location = '/admin';
     }).catch((error)=>{
       if(error.response.data.email){

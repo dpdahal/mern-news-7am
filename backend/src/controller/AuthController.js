@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import TokenMiddleware from "../middleware/TokenMiddleware.js";
 
 class AuthController{
 
@@ -21,6 +22,16 @@ class AuthController{
             console.log(error);
         }
     }
+
+    static async  tokenCheck(req,res){
+        let response =await TokenMiddleware.check(req.body.token);
+        if(response){
+            return res.status(200).json({success:true});
+        }else{
+            return res.status(200).json({success:false});
+        }
+
+    } 
 }
 
 export default AuthController;

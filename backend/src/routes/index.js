@@ -7,6 +7,8 @@ const router = express.Router();
 
 
 
+
+
 router.get('/', (req, res) => {
     res.send('Hello World!');
 });
@@ -14,6 +16,5 @@ router.use('/login', loginRouter);
 router.use('/user', userRoute);
 router.use('/category', categoryRouter);
 router.use('/news', newsRouter);
-
 
 export default router;

@@ -5,5 +5,5 @@ const loginRouter = express.Router();
 
 
 loginRouter.post("/", AuthController.login);
-
+loginRouter.post('/toke-check',AuthController.tokenCheck);
 export default loginRouter;
