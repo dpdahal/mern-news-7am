@@ -140,6 +140,11 @@ export default function AdminMiddlewareComponent() {
                     <i className="bi bi-newspaper" /><span>News</span><i className="bi bi-chevron-down ms-auto" />
                   </Link>
                   <ul id="components-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
+                  <li>
+                      <Link to="/admin/manage-category">
+                        <i className="bi bi-circle" /><span>Category</span>
+                      </Link>
+                    </li>
                     <li>
                       <Link to="/admin/add-news">
                         <i className="bi bi-circle" /><span>Add news</span>
