@@ -13,6 +13,7 @@ newsRouter.get('/:id', nInstance.show);
 newsRouter.post('/',upload.single('image'),Auth.check, nInstance.store);
 newsRouter.put('/:id',Auth.check, nInstance.update);
 newsRouter.delete('/:id',Auth.check, nInstance.destroy);
+newsRouter.get('/news-details/:slug', nInstance.getNews);
 
 export default newsRouter;
 
